@@ -51,8 +51,23 @@ export default function Consultation({ navigation }) {
                 {item.description} {"\n"}
                 Data: {item.date} {"\n"}
                 Hora: {item.time} {"\n"}
-                Valor: R$ {item.price} {"\n"}
+                Valor: R$ {item.price} 
+                
                 </Text> 
+                <TouchableOpacity
+                  style={styles.deleteConsultation}
+                  onPress={() => {
+                    deleteConsultation(item.id)
+                  }}
+                >
+                <FontAwesome
+                  name="trash"
+                  size={23}
+                  color="#F92e6A"
+                >
+                </FontAwesome>
+                </TouchableOpacity> 
+     
               </View>
               )
             }}

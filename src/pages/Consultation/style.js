@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
        paddingLeft:15,
      },
      DescriptionConsultation:{
-      width:"100%",
+      width:"80%",
       alignContent:"flex-start",
       backgroundColor:"#f5f5f5cf",
       padding:12,

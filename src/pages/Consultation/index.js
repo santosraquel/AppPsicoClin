@@ -4,7 +4,8 @@ import {
     View, 
     Text,
     TouchableOpacity,
-    FlatList
+    FlatList,
+    Linking
 } from 'react-native';
 
 import database from '../../config/firebase';
@@ -31,7 +32,7 @@ export default function Consultation({ navigation }) {
     return (
         <View style={styles.container}>
           <FlatList
-            showsVerticalScrollIndicator={false}
+            // showsVerticalScrollIndicator={false}
             data={consultation}
             renderItem={( { item } )=>{
                return(
@@ -48,11 +49,11 @@ export default function Consultation({ navigation }) {
                     })
                   }
                 >
-                {item.description} {"\n"}
-                Data: {item.date} {"\n"}
-                Hora: {item.time} {"\n"}
-                Valor: R$ {item.price} 
-                
+                <Text style={styles.title}>Consultation</Text>{"\n"}
+                Description: {item.description} {"\n"}
+                Date: {item.data} {"\n"}
+                Time: {item.time} {"\n"}
+                Price: R$ {item.price} 
                 </Text> 
                 <TouchableOpacity
                   style={styles.deleteConsultation}
@@ -72,11 +73,27 @@ export default function Consultation({ navigation }) {
               )
             }}
           />
-          <TouchableOpacity style
+          <TouchableOpacity
             style={styles.buttonNewConsultation}
             onPress={() => navigation.navigate("NewConsultation")}
           >
             <Text style={styles.iconButton}>+</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.buttonMessage}
+            onPress={() => {
+              Linking.openURL(
+                'mailto: psicoclin@gmail.com'
+              );
+              }}
+            >
+            <FontAwesome
+              name="envelope"
+              size={23}
+              color="#fff"
+            >
+            </FontAwesome>
           </TouchableOpacity>
         </View>
       )

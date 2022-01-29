@@ -11,26 +11,29 @@ const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Consultation">
+      <Stack.Navigator initialRouteName="Consultation" >
         <Stack.Screen
-          name="Minhas Consultas"
+          name="My Consultations"
           component={Consultation}
           options={{
-            headerTintColor: "#f92e6a"
+            headerTintColor: "#fff",
+            headerStyle: {backgroundColor:"#f92e6a"}
           }}
         />
         <Stack.Screen
           name="NewConsultation"
           component={NewConsultation}
           options={{
-            headerTintColor: "#f92e6a"
+            headerTintColor: "#fff",
+            headerStyle: {backgroundColor:"#f92e6a"}
           }}
         />
         <Stack.Screen
           name="Details"
           component={Details}
           options={{
-            headerTintColor: "#f92e6a"
+            headerTintColor: "#fff",
+            headerStyle: {backgroundColor:"#f92e6a"}
           }}
         />        
       </Stack.Navigator>

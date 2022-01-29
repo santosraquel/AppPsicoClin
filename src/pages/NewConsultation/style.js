@@ -6,27 +6,28 @@ const styles = StyleSheet.create({
    backgroundColor:'#fff'
  },
  label:{
-   width:"90%",
-   marginTop: 20,
-   fontSize:16,
-   marginLeft: 20,
-   color:"#F92E6A"
+  width:"90%",
+  marginTop: 20,
+  fontSize:16,
+  marginLeft: 20,
+  color:"#F92E6A",
  },
  input:{
   width:"90%",
-  marginTop:10,
+  marginTop:2,
   padding:10,
   height:50,
-  borderBottomWidth: 1,
-  borderBottomColor:"#F92E6A",
+  borderWidth: 1,
+  borderColor:"#F92E6A",
   marginLeft:"auto",
-  marginRight:"auto"
+  marginRight:"auto",
+  borderRadius:15,
  },
  buttonNewConsultation:{
-  width:60,
+  width:"90%",
   height:60,
-  position:"absolute",
-  bottom: 30,
+  position:"relative",
+  bottom: 5,
   left:20,
   backgroundColor:"#F92e6a",
   borderRadius:50,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
  },
  iconButton:{
   color:"#ffffff",
-  fontSize:16,
+  fontSize:20,
   fontWeight:"bold",
  }
  

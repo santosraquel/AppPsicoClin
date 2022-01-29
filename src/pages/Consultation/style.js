@@ -9,25 +9,32 @@ const styles = StyleSheet.create({
      Consultations:{
       width:"100%",
       flexDirection:"row",
-      justifyContent:"space-between",
+     // justifyContent:"space-between",
       marginTop:5
+     },
+     title:{
+      color:"#F92e6a",
+      fontSize:18,
+      textAlign:"right",
+      position:"relative",
      },
      deleteConsultation:{
        justifyContent:"center",
-       paddingLeft:15,
+       padding:12,
+       left:10,
+       marginBottom: 5,
+       backgroundColor:"#f5f5f5cf",
      },
      DescriptionConsultation:{
-      width:"80%",
+      width:"83%",
       alignContent:"flex-start",
       backgroundColor:"#f5f5f5cf",
       padding:12,
-      paddingHorizontal: 20,
-      // borderRadius:50,
       marginBottom: 5,
-      marginRight:15,
       color:"#282b2db5",
+      left:10,
      },
-     buttonNewConsultation:{
+     buttonMessage:{
       width:60,
       height:60,
       position:"absolute",
@@ -39,10 +46,21 @@ const styles = StyleSheet.create({
       alignItems: "center"
      },
      iconButton:{
-      color:"#ffffff",
-      fontSize:25,
-      fontWeight:"bold",
-     },
+       color:"#ffffff",
+       fontSize:25,
+       //fontWeight:"bold",
+      },
+      buttonNewConsultation:{
+       width:60,
+       height:60,
+       position:"absolute",
+       bottom: 30,
+       left:"80%",
+       backgroundColor:"#F92e6a",
+       borderRadius:50,
+       justifyContent:"center",
+       alignItems: "center",
+      },
     });
 
 export default styles;
